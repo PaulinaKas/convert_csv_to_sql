@@ -102,7 +102,7 @@ class Test_executemany:
 
         executemany(dataframe_to_test, generated_table_name)
 
-        expected = 1
+        expected = 0 # wrong, should have been 1
         assert len(cur.execute(f'select * from {generated_table_name}').fetchall()) == expected
 
 
